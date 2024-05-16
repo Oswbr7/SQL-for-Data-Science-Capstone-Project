@@ -1,0 +1,25 @@
+Dive Deeper
+ I created two tables so i can see the total number of medals in the winter and summer olympics. Thanks to the Pearon correlation, the coefficient between the total 
+medals of summer and winter olympics is 0.94 which is positive so we could say that the performance of a country in winter olympics is correlated to taht in summer olympics
+and with the standart deviation we caan see that a country performance by year change more in summer games
+
+Go broader
+
+The first relation I missed initially is how the medals fluctuated at the first olympics compared with the last years, this could be due new rules/regulations in the games.
+Other connection I missed is how many ahtletes of each genre we have so we could make an analysis of every sport if they have a team of each genre
+and with that see the stastics per genre in every team on every sport
+
+My new meatric starts with the hypothesis that in sports like basketball and Futball, if the man team is a really winning team, the Female Team is not necessarily that good
+or viceversa
+
+In Basketball, with this code(SELECT NOC AS Team, COUNT(Medal) AS Medals
+FROM athlete
+WHERE Sport = 'Basketball' and Sex = 'M'
+GROUP BY NOC
+ORDER BY Medals DESC
+LIMIT 20) 
+We have that the top 3 teams are USA with 222 medals, URS 110 and YUG 60 but if we see the Female Team let's see if the top 3 remains the same.
+In the Female teams the top 3 is USA 119 medals, AUS 60 Medals, URS 36 Medals. So we could see that only USA has a very competitive Team in basketball in both genres 
+Now let's see in Football the top 3 teams by each genre 
+Brasil 101, URS 87, HUN 79 and for Female Team we have USA 79, GER 68 and CAN 36 
+So we could say that in this case, the best teams of each genre are differente so my hypothesis is disproved
